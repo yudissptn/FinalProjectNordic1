@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Mar 2019 pada 04.35
+-- Waktu pembuatan: 17 Mar 2019 pada 04.36
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.0
 
@@ -25,6 +25,46 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `departemen`
+--
+
+CREATE TABLE `departemen` (
+  `id` int(11) NOT NULL,
+  `nama_departemen` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `departemen`
+--
+
+INSERT INTO `departemen` (`id`, `nama_departemen`) VALUES
+(1, 'Human Resources Department'),
+(4, 'RnD'),
+(7, 'AE');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `level`
+--
+
+CREATE TABLE `level` (
+  `id` int(11) NOT NULL,
+  `level_karyawan` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `level`
+--
+
+INSERT INTO `level` (`id`, `level_karyawan`) VALUES
+(1, 'Senior Manager'),
+(4, 'Assistant'),
+(7, 'Staff');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `login`
 --
 
@@ -40,7 +80,29 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `username`, `password`, `role_id`) VALUES
-(1, 'yudhistira', '1234', 1);
+(1, 'yudhistira', '1234', 1),
+(2, 'admin', '1234', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tabel_karyawan`
+--
+
+CREATE TABLE `tabel_karyawan` (
+  `id` int(11) NOT NULL,
+  `nik` int(4) NOT NULL,
+  `nama` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tabel_karyawan`
+--
+
+INSERT INTO `tabel_karyawan` (`id`, `nik`, `nama`) VALUES
+(1, 1001, 'Adi'),
+(4, 1002, 'Yasin'),
+(7, 1003, 'Ali');
 
 -- --------------------------------------------------------
 
@@ -184,9 +246,27 @@ INSERT INTO `tahun` (`id`, `nama_tahun`) VALUES
 --
 
 --
+-- Indeks untuk tabel `departemen`
+--
+ALTER TABLE `departemen`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `level`
+--
+ALTER TABLE `level`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `login`
 --
 ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tabel_karyawan`
+--
+ALTER TABLE `tabel_karyawan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -200,10 +280,28 @@ ALTER TABLE `tahun`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `departemen`
+--
+ALTER TABLE `departemen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT untuk tabel `level`
+--
+ALTER TABLE `level`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT untuk tabel `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `tabel_karyawan`
+--
+ALTER TABLE `tabel_karyawan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `tahun`
