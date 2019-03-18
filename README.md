@@ -19,5 +19,8 @@ This project containing several web application to fulfill final project task. T
 - After user enter the username and password for this app the login page change to HRIS app
 - This page will shown tables that combination between name, departemen and level tables in the database
 - To combining tables, using query join method.
-- 
+- Option for edit and delete data shown in the right of table
+- For update, using query update method
+- For deleting, using query delete method
+- In the bottom right of table, option for insert new data is shown. Using query insert for all the table that have relation by table id.
   
