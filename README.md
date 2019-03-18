@@ -1,6 +1,11 @@
 # FinalProjectNordic1
-1. Create a web app to check whether year that inputed is leap year or not.
-2. Year checked must exist in database, otherwise it won't checked
-3. Before checking, user must input username and password in the login page.
-4. If inputed year in the year database range, input will be checked.
-5. Result will be shown whether it is leap year or not.
+This project containing several web application to fulfill final project task. This project built using bootstrap4.
+- Create leap year checker that could identify year is leap year or not. This app include database that check whether input year include in   database or not.
+- Second app is to built HR- Information System. This app function is to make database for employee that has a CRUD method. The database     has several tables that have relation for each tables. 
+
+# Leap Year Checker
+- Firstly, create a login page to switch between different app by signing role for each user.
+- In this login page user must enter correct username and password that will check by query in database.
+- After user sign in, login page change to leap year checker.
+- This page contain input element for user enter the input year and a button torun the checker
+- 
