@@ -17,5 +17,7 @@ This project containing several web application to fulfill final project task. T
 # HRIS
 - Create tables in database for name, department and level of employee.
 - After user enter the username and password for this app the login page change to HRIS app
+- This page will shown tables that combination between name, departemen and level tables in the database
+- To combining tables, using query join method.
 - 
   
