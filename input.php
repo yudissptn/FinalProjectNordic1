@@ -22,10 +22,10 @@ $base_url = "http://" . $_SERVER['SERVER_NAME'] . '/finalprojectnordic1/';
                         <h5 class="card-title text-center">Input Data Baru</h5>
                         <form class="form-signin" name="Taxation" action="<?php echo $base_url; ?>action_input.php" id="taxation_form" method="get">
                             <input type="hidden" name="id" id="id" value="<?php echo $_GET['id']; ?>">
-                            <div class="form-label-group"><input class="form-control" type="text" name="nik" id="nik" placeholder="Input NIK"><br></div>
-                            <div class="form-label-group"><input class="form-control" type="text" name="nama" id="nama" placeholder="Input Nama"><br></div>
-                            <div class="form-label-group"><input class="form-control" type="text" name="nama_departemen" id="nama_departemen" placeholder="Input departement"><br></div>
-                            <div class="form-label-group"><input class="form-control" type="text" name="level_karyawan" id="level_karyawan" placeholder="Input level"><br></div>
+                            <div class="form-label-group"><input class="form-control" type="text" name="nik" id="nik" placeholder="Input NIK" required><br></div>
+                            <div class="form-label-group"><input class="form-control" type="text" name="nama" id="nama" placeholder="Input Nama" required><br></div>
+                            <div class="form-label-group"><input class="form-control" type="text" name="nama_departemen" id="nama_departemen" placeholder="Input departement" required><br></div>
+                            <div class="form-label-group"><input class="form-control" type="text" name="level_karyawan" id="level_karyawan" placeholder="Input level" required><br></div>
                             <br><br>
                             <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Update</button>
                         </form>
