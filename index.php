@@ -26,6 +26,9 @@ $base_url = "http://" . $_SERVER['SERVER_NAME'] . '/finalprojectnordic1/';
     if (isset($_SESSION['username']) and $_SESSION['username'] != '' and $_SESSION['role_id'] == 2) {
         hris();
     }
+    if (isset($_SESSION['username']) and $_SESSION['username'] != '' and $_SESSION['role_id'] == 3) {
+        angka();
+    }
     if (!isset($_SESSION['username'])) { ?>
     <div class="container">
         <div class="row">
