@@ -46,3 +46,9 @@ body {
   height: auto;
   border-radius: 2rem;
 }
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
